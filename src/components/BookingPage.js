@@ -31,7 +31,7 @@ const BookingForm = () => {
         clearForm()
     }
     else {
-        alert("Please enter valid data.")
+        alert("Please fill all needed data.")
     }
     }
     return (
@@ -39,10 +39,10 @@ const BookingForm = () => {
         <form className="form" onSubmit={handleSubmit}>
 
             <label htmlFor="res-date">Choose Date <sup>*</sup></label>
-            <input type="date" id="res-date" value={date} onChange={(e) => setDate(e.target.value)}/>
+            <input type="date" id="res-date" required={true} value={date} onChange={(e) => setDate(e.target.value)}/>
 
             <label htmlFor="res-time">Choose Time <sup>*</sup></label>
-            <select id="res-time" value={time} onChange={(e) => setTime(e.target.value)}>
+            <select id="res-time" required value={time} onChange={(e) => setTime(e.target.value)}>
                 <option>Time</option>
                 {availableTimes.map((t) =>(
                 <option value={t} key={t}>{t}</option>
@@ -50,10 +50,10 @@ const BookingForm = () => {
             </select>
 
             <label htmlFor="guests">Number of Guests <sup>*</sup></label>
-            <input type="number" placeholder="0" min={1} max={10} value={guests} onChange={(e) => setGuests(e.target.value)} id="guests"/>
+            <input type="number" required placeholder="0" min={1} max={10} value={guests} onChange={(e) => setGuests(e.target.value)} id="guests"/>
 
             <label htmlFor="occasion">Occasion <sup>*</sup></label>
-            <select id="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)}>
+            <select id="occasion" required value={occasion} onChange={(e) => setOccasion(e.target.value)}>
                 <option>--------</option>
                 <option>Birthday</option>
                 <option>Anniversary</option>

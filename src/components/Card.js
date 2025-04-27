@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../App.css"
 
 const Card = (prop) => {
@@ -9,7 +10,7 @@ const Card = (prop) => {
             <h2>{prop.price}</h2>
             </div>
             <p>{prop.description}</p>
-            <p><span>Order a delivery 🛵</span></p>
+            <p><span><Link to="/order-online">Order a delivery 🛵</Link></span></p>
      </div>
 )
 }
