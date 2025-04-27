@@ -178,9 +178,9 @@ button:hover {
 }
 
 .card p span a {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   cursor: pointer;
   color: #804a1d;
+  font-size: x-large;
 }
 
 .testi {
@@ -417,6 +417,11 @@ button:hover {
   .rights {
     text-align: center;
   }
+
+  .card p span a {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
 }
 
 sup {
